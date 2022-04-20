@@ -3,6 +3,7 @@ import './App.css';
 import { Route } from "react-router-dom";
 import quoteData from "./APIcalls";
 import AsideNav from "./AsideNav";
+import Load from "./Load";
 
 class App extends React.Component {
   constructor() {
@@ -33,7 +34,8 @@ class App extends React.Component {
       <main className="App">
         <h1>FanFic Me Chan</h1>
         <AsideNav />
-        <button onClick={() => {this.fetchData()}}>New Quote</button>
+        <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
+        {/* <button onClick={() => {this.fetchData()}}>New Quote</button> */}
       </main>
     );
   }
