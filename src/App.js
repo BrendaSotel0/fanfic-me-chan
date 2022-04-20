@@ -8,32 +8,31 @@ class App extends React.Component {
     super();
     this.state = {
       quotes: [],
-      error: '',
-      hasError: false,
-    };
+      error: ''
+    }
   }
 
-  componentDidMount = () => {
+  fetchData = () => {
     return quoteData()
-      .then((data) => this.setState({ quotes: data }))
+      .then((data) => {
+        console.log(data)
+        this.setState({ quotes: data })}
+      )
       .catch((error) =>
-        this.setState({ hasError: true, error: `Oops! Something went wrong!` })
-      );
-  };
+        this.setState({ error: `Oops! Something went wrong!` })
+      )
+  }
 
-  //  fetchData = () => {
-  //   return fetch('https://animechan.vercel.app/api/random')
-  //   .then(response => response.json())
-  //   .then(quote => console.log(quote))
+  //  addQuote = (newQuote) => {
+  //   this.setState({quotes: [...this.state.quotes, newQuote]})
   // }
   
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <button onClick={() => {this.componentDidMount()}}>CLICK</button>
-        </header>
-      </div>
+      <main className="App">
+        <h1>FanFic Me Chan</h1>
+        <button onClick={() => {this.fetchData()}}>CLICK</button>
+      </main>
     );
   }
 }
