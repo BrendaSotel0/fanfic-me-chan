@@ -2,6 +2,7 @@ import React from "react";
 import './App.css';
 import { Route } from "react-router-dom";
 import quoteData from "./APIcalls";
+import AsideNav from "./AsideNav";
 
 class App extends React.Component {
   constructor() {
@@ -23,15 +24,16 @@ class App extends React.Component {
       )
   }
 
-  //  addQuote = (newQuote) => {
-  //   this.setState({quotes: [...this.state.quotes, newQuote]})
-  // }
+  addQuote = (newQuote) => {
+    this.setState({quotes: [...this.state.quotes, newQuote]})
+  }
   
   render() {
     return (
       <main className="App">
         <h1>FanFic Me Chan</h1>
-        <button onClick={() => {this.fetchData()}}>CLICK</button>
+        <AsideNav />
+        <button onClick={() => {this.fetchData()}}>New Quote</button>
       </main>
     );
   }
