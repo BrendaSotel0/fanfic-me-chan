@@ -6,7 +6,7 @@ const Load = ({fetchData}) => {
     <div className="random-quote">
       <Link to="/random-quote">
         <button className="click-for-quote"
-          onClick={() => fetchData()}>Quote
+          onClick={() => fetchData()}>New Quote
         </button>
       </Link>
     </div>

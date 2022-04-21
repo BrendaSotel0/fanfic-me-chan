@@ -10,13 +10,15 @@
 
 .home,
 .saved-quotes {
-  height: 50px;
-  width: 100px;
+  height: 75px;
+  width: 150px;
   border: none;
   background-color: #625674;
-  margin-top: 20%;
   margin-bottom: 20%;
   border-radius: 50%;
+  Font-Family: 'Overpass',
+  Sans-Serif;
+  Font-Size: 17px;
 }
 h2 {
   margin-top: 10%;
