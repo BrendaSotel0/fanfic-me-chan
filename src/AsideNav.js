@@ -7,9 +7,9 @@ import "./AsideNav.css";
 const AsideNav = () => {
   return (
     <div className="aside-nav">
-      <h3>
+      <h2>
         Welcome to FanFic Me Chan, the muse for your next fanfic adventure!
-      </h3> 
+      </h2> 
       <h3>
         To get started, simple click on 'New Quote' and you will be given a random quote to get your creative juices flowing.
       </h3>
