@@ -1,0 +1,11 @@
+.save-quote {
+    height: 75px;
+    width: 150px;
+    border: none;
+    background-color: #625674;
+    margin-bottom: 20%;
+    border-radius: 50%;
+    Font-Family: 'Overpass',
+    Sans-Serif;
+    Font-Size: 17px;
+}

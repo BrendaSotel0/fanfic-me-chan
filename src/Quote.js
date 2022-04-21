@@ -1,4 +1,5 @@
 import React from "react";
+import "./Quote.css"
 
 const Quote = ({quote, addQuote, savedQuotes}) => {
 
