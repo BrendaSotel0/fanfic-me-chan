@@ -11,6 +11,7 @@ class App extends React.Component {
     super();
     this.state = {
       quote: {},
+      savedQuotes: [],
       error: ''
     }
   }
@@ -20,16 +21,15 @@ class App extends React.Component {
       .then((data) => {
         console.log(data)
         this.setState({ quote: data })}
-        // console.log(this.state.quotes)
       )
       .catch((error) =>
         this.setState({ error: `Oops! Something went wrong!` })
       )
   }
 
-  // addQuote = (newQuote) => {
-  //   this.setState({quotes: [...this.state.quotes, newQuote]})
-  // }
+  addQuote = (newQuote) => {
+    this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
+  }
   
   render() {
     return (
@@ -37,7 +37,7 @@ class App extends React.Component {
         <h1>FanFic Me Chan</h1>
         <AsideNav />
         <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
-        <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} />)} />
+        <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} savedQuotes={this.state.savedQuotes} />)} />
         {/* <button onClick={() => {this.fetchData()}}>New Quote</button> */}
       </main>
     );
