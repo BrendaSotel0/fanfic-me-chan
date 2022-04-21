@@ -4,12 +4,14 @@ import { Route } from "react-router-dom";
 import quoteData from "./APIcalls";
 import AsideNav from "./AsideNav";
 import Load from "./Load";
+import Quote from "./Quote";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      quotes: [],
+      quote: {},
+      savedQuotes: [],
       error: ''
     }
   }
@@ -18,7 +20,7 @@ class App extends React.Component {
     return quoteData()
       .then((data) => {
         console.log(data)
-        this.setState({ quotes: data })}
+        this.setState({ quote: data })}
       )
       .catch((error) =>
         this.setState({ error: `Oops! Something went wrong!` })
@@ -26,7 +28,7 @@ class App extends React.Component {
   }
 
   addQuote = (newQuote) => {
-    this.setState({quotes: [...this.state.quotes, newQuote]})
+    this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
   }
   
   render() {
@@ -35,6 +37,7 @@ class App extends React.Component {
         <h1>FanFic Me Chan</h1>
         <AsideNav />
         <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
+        <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} savedQuotes={this.state.savedQuotes} />)} />
         {/* <button onClick={() => {this.fetchData()}}>New Quote</button> */}
       </main>
     );
