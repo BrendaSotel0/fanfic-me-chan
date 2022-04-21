@@ -11,7 +11,7 @@ const AsideNav = () => {
         Welcome to FanFic Me Chan, the muse for your next fanfic adventure!
       </h2> 
       <h3>
-        To get started, simple click on 'New Quote' and you will be given a random quote to get your creative juices flowing.
+        To get started, simply click on the 'New Quote' button and you will be given a random quote to get your creative juices flowing.
       </h3>
       <Link to="/">
         <button className="home"
