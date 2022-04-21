@@ -20,7 +20,6 @@ class App extends React.Component {
   fetchData = () => {
     return quoteData()
       .then((data) => {
-        console.log(data)
         this.setState({ quote: data })}
       )
       .catch((error) =>

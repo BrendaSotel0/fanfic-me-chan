@@ -1,5 +1,6 @@
 import React from "react";
 import Saved from "./Saved";
+import Load from "./Load";
 import { Link } from "react-router-dom";
 
 const AsideNav = () => {
@@ -11,7 +12,10 @@ const AsideNav = () => {
       <h3>
         To get started, simple click on 'New Quote' and you will be given a random quote to get your creative juices flowing.
       </h3>
-      <button>Home</button>
+      <Link to="/">
+        <button className="home"
+        onClick={() => <Load />}>Home</button>
+      </Link>
       <Link to="/saved">
         <button className="saved-quotes"
           onClick={() => <Saved />}>Saved Quotes
