@@ -5,6 +5,7 @@ import quoteData from "./APIcalls";
 import AsideNav from "./AsideNav";
 import Load from "./Load";
 import Quote from "./Quote";
+import Saved from "./Saved";
 
 class App extends React.Component {
   constructor() {
@@ -37,8 +38,10 @@ class App extends React.Component {
         <h1>FanFic Me Chan</h1>
         <AsideNav />
         <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
+
         <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} savedQuotes={this.state.savedQuotes} />)} />
-        {/* <button onClick={() => {this.fetchData()}}>New Quote</button> */}
+
+        <Route exact path="/saved" render={() => (<Saved savedQuotes={this.state.savedQuotes} /> )} />
       </main>
     );
   }
