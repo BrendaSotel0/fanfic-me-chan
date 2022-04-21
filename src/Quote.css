@@ -8,12 +8,15 @@
   border-radius: 5%;
   background-color: rgba(140, 141, 134, 0.7);
 }
-h5 {
-  Font-Size: 20px;
-}
 
 h4 {
+  Font-Size: 20px;
+  margin-bottom: 0%;
+}
+
+h5 {
   Font-Size: 30px;
+  margin: 0%;
 }
 
 .save-quote {
