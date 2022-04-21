@@ -34,7 +34,7 @@ class App extends React.Component {
   render() {
     return (
       <main className="App">
-        <h1>FanFic Me Chan</h1>
+        <p>FanFic Me Chan</p>
         <AsideNav />
         <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
         <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} savedQuotes={this.state.savedQuotes} />)} />
