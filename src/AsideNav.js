@@ -2,6 +2,7 @@ import React from "react";
 import Saved from "./Saved";
 import Load from "./Load";
 import { Link } from "react-router-dom";
+import "./AsideNav.css";
 
 const AsideNav = () => {
   return (

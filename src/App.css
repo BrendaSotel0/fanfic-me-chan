@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Overpass|Permanent+Marker");
+
 .App {
+  height: 100vh;
   text-align: center;
+  Font-Family: 'Permanent Marker',
+  Cursive;
 }
 
 .App-logo {
