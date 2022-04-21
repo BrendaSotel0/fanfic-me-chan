@@ -1,7 +1,7 @@
 .quote-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
   width: 60%;
   height: 100%;
   margin-left: 3%;
@@ -12,11 +12,15 @@
 h4 {
   Font-Size: 20px;
   margin-bottom: 0%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 h5 {
   Font-Size: 30px;
   margin: 0%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .save-quote {
@@ -24,11 +28,10 @@ h5 {
     width: 150px;
     border: none;
     background-color: #625674;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     border-radius: 50%;
     Font-Family: 'Overpass',
     Sans-Serif;
     Font-Size: 17px;
 }
-

@@ -15,13 +15,17 @@ const Quote = ({quote, addQuote, savedQuotes}) => {
 
   return (
     <div className="quote-card">
-      <h4>Anime</h4> 
-      <h5>{quote.anime}</h5>
-      <h4>Character</h4>
-      <h5>{quote.character}</h5>
-      <h4>Quote</h4>
-      <h5>{quote.quote}</h5>
-      <button className="save-quote" onClick={(event) => submitQuote(event)}>Save</button>
+      <section className="card-section">
+        <h4>Anime</h4> 
+        <h5>{quote.anime}</h5>
+        <h4>Character</h4>
+        <h5>{quote.character}</h5>
+        <h4>Quote</h4>
+        <h5>{quote.quote}</h5>
+      </section>
+      <div className="button-section">
+        <button className="save-quote" onClick={(event) => submitQuote(event)}>Save</button>
+      </div>
     </div>
   )
 }
