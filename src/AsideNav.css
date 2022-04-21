@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 28%;
-  height: 70%;
+  height: 100%;
   margin-left: 3%;
   background: rgba(140, 98, 114, 0.7);
   border-radius: 5%;
@@ -21,6 +21,7 @@
   Sans-Serif;
   Font-Size: 17px;
 }
+
 h2 {
   margin-top: 10%;
   Font-Size: 30px;
