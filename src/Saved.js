@@ -1,5 +1,4 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
 import SavedQuoteCard from "./SavedQuoteCard";
 
 const Saved = ({savedQuotes}) => {
@@ -18,7 +17,6 @@ const Saved = ({savedQuotes}) => {
 
   return (
     <div className="quote-card">
-      {console.log("SAVED QUOTES", savedQuotes)}
       {quoteCard}
     </div>
   )

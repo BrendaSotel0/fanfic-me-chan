@@ -1,6 +1,6 @@
 import React from "react";
 import Saved from "./Saved";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const AsideNav = () => {
   return (
@@ -17,7 +17,6 @@ const AsideNav = () => {
           onClick={() => <Saved />}>Saved Quotes
         </button>
       </Link>
-      {/* <button className="saved-quotes" onClick={() => <Saved />}>Saved Quotes</button> */}
     </div>
   )
 }

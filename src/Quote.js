@@ -17,7 +17,7 @@ const Quote = ({quote, addQuote, savedQuotes}) => {
       <p>Anime: {quote.anime}</p>
       <p>Character: {quote.character}</p>
       <p>Quote: {quote.quote}</p>
-      <button className="save-quote" onClick={(event) => {submitQuote(event); console.log("SAVED", savedQuotes)}}>Save</button>
+      <button className="save-quote" onClick={(event) => submitQuote(event)}>Save</button>
     </div>
   )
 }
