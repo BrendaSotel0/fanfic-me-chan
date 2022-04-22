@@ -19,7 +19,7 @@ const Saved = ({savedQuotes}) => {
   })
 
   return (
-    <div className="quote-card">
+    <div className="saved-section-quote-card">
       {quoteCard}
     </div>
   )
