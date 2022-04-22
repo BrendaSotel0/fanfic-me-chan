@@ -31,3 +31,6 @@ button:active {
   background-color: #795272;
   transform: translateY(4px);
 }
+button {
+  cursor: pointer;
+}
