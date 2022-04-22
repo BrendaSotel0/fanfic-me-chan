@@ -14,6 +14,7 @@ p {
   background-color: rgba(216, 118, 89, 0.7);
   margin-left: 3%;
   margin-right: 3%;
+  box-shadow: 6px 8px 10px #745560;
 }
 
 .container {
