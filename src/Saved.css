@@ -1,0 +1,4 @@
+.saved-section {
+  display: grid;
+  grid-column: repeat(2, 1fr);
+}
