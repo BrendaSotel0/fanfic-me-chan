@@ -7,12 +7,16 @@ describe('Load', () => {
     cy.visit("http://localhost:3000/").contains("Welcome to FanFic Me Chan, the muse for your next fanfic adventure!");
   })
 
-    it('should have a home button', () => {
+  it('should have a home button', () => {
     cy.visit('http://localhost:3000/')
     cy.get('*[class^="home"]')
       .should('have.text', 'Home')
-
   })
 
+  it('should have a saved quotes button', () => {
+    cy.visit('http://localhost:3000/')
+    cy.get('*[class^="saved-quotes"]')
+      .should('have.text', 'Saved Quotes')
+  })
 
 })
