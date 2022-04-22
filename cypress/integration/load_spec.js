@@ -19,4 +19,10 @@ describe('Load', () => {
       .should('have.text', 'Saved Quotes')
   })
 
+  it('should have a new quote button', () => {
+    cy.visit('http://localhost:3000/')
+    cy.get('*[class^="click-for-quote"]')
+      .should('have.text', 'New Quote')
+  })
+
 })
