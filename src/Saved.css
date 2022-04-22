@@ -1,0 +1,9 @@
+.saved-section-quote-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 58%;
+  height: 90%;
+  margin-left: 3%;
+  overflow-y: scroll;
+}

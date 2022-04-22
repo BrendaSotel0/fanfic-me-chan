@@ -1,0 +1,40 @@
+.quote-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 90%;
+  margin-left: 3%;
+  border-radius: 8%;
+  background-color: rgba(140, 141, 134, 0.7);
+  box-shadow: 6px 8px 10px #745560;
+  overflow-y: scroll;
+}
+
+h4 {
+  Font-Size: 20px;
+  margin-bottom: 0%;
+  margin-left: 1%;
+  margin-right: 1%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+h5 {
+  Font-Size: 30px;
+  margin: 0%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.save-quote {
+    height: 75px;
+    width: 150px;
+    border: none;
+    background-color: #625674;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 50%;
+    Font-Family: 'Overpass',
+    Sans-Serif;
+    Font-Size: 17px;
+}

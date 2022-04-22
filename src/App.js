@@ -34,11 +34,13 @@ class App extends React.Component {
   render() {
     return (
       <main className="App">
-        <h1>FanFic Me Chan</h1>
-        <AsideNav />
-        <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
-        <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} savedQuotes={this.state.savedQuotes} />)} />
-        <Route exact path="/saved" render={() => (<Saved savedQuotes={this.state.savedQuotes} /> )} />
+        <p>FanFic Me Chan</p>
+        <div className="container">
+          <AsideNav />
+          <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
+          <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} savedQuotes={this.state.savedQuotes} />)} />
+          <Route exact path="/saved" render={() => (<Saved savedQuotes={this.state.savedQuotes} /> )} />
+        </div>
       </main>
     );
   }

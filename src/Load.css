@@ -1,0 +1,11 @@
+.click-for-quote {
+  height: 100px;
+  width: 600px;
+  border: none;
+  background-color: rgba(98, 114, 168, 0.7);
+  border-radius: 50%;
+  Font-Family: 'Overpass',
+  Sans-Serif;
+  Font-Size: 25px;
+  margin-left: 40%;
+}

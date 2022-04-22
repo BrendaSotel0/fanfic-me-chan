@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Load.css";
 
 const Load = ({fetchData}) => {
   return (
     <div className="random-quote">
       <Link to="/random-quote">
         <button className="click-for-quote"
-          onClick={() => fetchData()}>Quote
+          onClick={() => fetchData()}>New Quote
         </button>
       </Link>
     </div>
