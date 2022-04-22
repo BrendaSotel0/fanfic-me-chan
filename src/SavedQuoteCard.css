@@ -6,6 +6,7 @@
   border-radius: 8%;
   background-color: rgba(140, 141, 134, 0.7);
   overflow-y: scroll;
+  box-shadow: 6px 8px 10px #745560;
 }
 
 h7 {

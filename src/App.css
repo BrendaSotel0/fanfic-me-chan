@@ -21,3 +21,12 @@ p {
   justify-content: flex-start;
   align-items: center;
 }
+
+button:hover {
+  background-color: #795272
+}
+
+button:active {
+  background-color: #795272;
+  transform: translateY(4px);
+}
