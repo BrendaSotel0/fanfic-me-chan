@@ -1,5 +1,5 @@
-.saved-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+.saved-section-quote-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
