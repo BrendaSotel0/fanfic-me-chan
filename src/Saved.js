@@ -4,7 +4,7 @@ import "./Saved.css"
 
 const Saved = ({savedQuotes}) => {
 
-  const quoteCard = savedQuotes.map(quote => {
+  const quoteCard = savedQuotes.map((quote, i) => {
 
     return (
       <div className="saved-section">
@@ -12,7 +12,7 @@ const Saved = ({savedQuotes}) => {
          anime={quote.anime}
          character={quote.character}
          quote={quote.quote}
-         key={Date.now()}
+         key={i}
         />
       </div>
     )

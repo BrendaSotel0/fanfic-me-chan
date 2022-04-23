@@ -1,14 +1,15 @@
 import React from "react";
 import "./Quote.css"
 
-const Quote = ({quote, addQuote, savedQuotes}) => {
+const Quote = ({ quote, addQuote }) => {
 
   const submitQuote = (event) => {
     event.preventDefault()
     const newQuote = {
       anime: quote.anime,
       character: quote.character,
-      quote: quote.quote
+      quote: quote.quote,
+      key: Date.now()
     }
     addQuote(newQuote)
   }

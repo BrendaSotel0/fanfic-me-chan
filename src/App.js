@@ -27,8 +27,14 @@ class App extends React.Component {
       )
   }
 
-  addQuote = (newQuote) => {
-    this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
+  // addQuote = (newQuote) => {
+  //   this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
+  // }
+
+   addQuote = (newQuote) => {
+     if(!this.state.savedQuotes.includes(newQuote)) {
+      this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
+    }
   }
   
   render() {
@@ -38,7 +44,7 @@ class App extends React.Component {
         <div className="container">
           <AsideNav />
           <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
-          <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} savedQuotes={this.state.savedQuotes} />)} />
+          <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} />)} />
           <Route exact path="/saved" render={() => (<Saved savedQuotes={this.state.savedQuotes} /> )} />
         </div>
       </main>
