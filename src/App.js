@@ -27,14 +27,8 @@ class App extends React.Component {
       )
   }
 
-  // addQuote = (newQuote) => {
-  //   this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
-  // }
-
-   addQuote = (newQuote) => {
-     if(!this.state.savedQuotes.includes(newQuote)) {
-      this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
-    }
+  addQuote = (newQuote) => {
+    this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
   }
   
   render() {
