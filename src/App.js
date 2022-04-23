@@ -13,7 +13,7 @@ class App extends React.Component {
     this.state = {
       quote: {},
       savedQuotes: [],
-      error: ''
+      error: '',
     }
   }
 
@@ -27,12 +27,10 @@ class App extends React.Component {
       )
   }
 
-  // addQuote = (newQuote) => {
-  //   this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
-  // }
-
-   addQuote = (newQuote) => {
-     if(!this.state.savedQuotes.includes(newQuote)) {
+  addQuote = (newQuote) => {
+    const isFound = this.state.savedQuotes.find(targetQuote => targetQuote.quote === newQuote.quote)
+    
+    if(!isFound) {
       this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
     }
   }

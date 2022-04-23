@@ -8,6 +8,7 @@
   background: rgba(140, 98, 114, 0.7);
   border-radius: 5%;
   box-shadow: 6px 8px 10px #745560;
+  overflow-y: scroll;
 }
 
 .home,
