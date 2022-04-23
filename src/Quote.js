@@ -32,3 +32,7 @@ const Quote = ({ quote, addQuote }) => {
 }
 
 export default Quote;
+
+// one idea
+// We can make a Button that takes in a boolean prop and if clicked we use that prop in our onclick method to disable the button
+// But, you probably need a reset method to reset the buttons state

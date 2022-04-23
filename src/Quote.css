@@ -9,6 +9,7 @@
   background-color: rgba(140, 141, 134, 0.7);
   box-shadow: 6px 8px 10px #745560;
   overflow-y: scroll;
+  /* cursor: url(kawaiiface.png), auto; */
 }
 
 h4 {
@@ -37,4 +38,6 @@ h5 {
     Font-Family: 'Overpass',
     Sans-Serif;
     Font-Size: 17px;
+    /* cursor: url(kawaiiface.png),
+    auto; */
 }
