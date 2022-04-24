@@ -44,4 +44,27 @@ describe("Load", () => {
     cy.request("http://localhost:3000/saved");
     cy.get('*[class^="saved-section"]').should("be.visible");
   });
+
+  it("should show the saved quotes section", () => {
+    cy.visit("http://localhost:3000/");
+    cy.get('*[class^="click-for-quote"]')
+      .should("be.visible")
+      .click({ force: true });
+    cy.get('*[class^="save-quote"]')
+      .should("be.visible")
+      .click({ force: true });
+    cy.intercept({ method: "GET", path: "" }, { fixture: "quote.json" });
+    cy.request("http://localhost:3000/random-quote");
+    cy.get('*[class^="save-quote"]').click({ multiple: true, force: true });
+    cy.get('*[class^="saved-quotes"]')
+      .should("be.visible")
+      .click({ force: true });
+    cy.request("http://localhost:3000/saved");
+    cy.get('*[class^="saved-section"]')
+      .should("be.visible")
+      .click({ force: true });
+    cy.intercept({ method: "GET", path: "" }, { fixture: "quote.json" });
+    cy.request("http://localhost:3000/random-quote");
+    cy.get("h1").should("be.visible");
+  });
 });
