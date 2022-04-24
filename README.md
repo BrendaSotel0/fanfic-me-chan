@@ -4,7 +4,7 @@
 ![gif](https://media.giphy.com/media/mE7qoB2ALpA37Ub1aR/giphy.gif)
 
 ## Deployed Link
-[FanFicMeChan](fanficmechan.surge.sh)
+[FanFicMeChan](https://fanficmechan.surge.sh)
 
 ### Contributors
 Brenda Sotelo
