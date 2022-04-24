@@ -1,9 +1,5 @@
 describe("Quote", () => {
   it('Should have a header that says FanFic Me Chan', () => {
-    cy.intercept('GET', 'https://animechan.vercel.app/api/random', {
-      statusCode: 200,
-      fixture: 'quote.json'
-      })
       cy.visit("http://localhost:3000/random-quote").contains("FanFic Me Chan");
   });
 
@@ -29,15 +25,36 @@ describe("Quote", () => {
       .should('have.text', 'Save')
   })
 
-  // it('should be able to save the question to their game', () => {
-  //   cy.intercept('GET', 'https://animechan.vercel.app/api/random', {
-  //     statusCode: 200,
-  //     fixture: 'quote.json'
-  //   })
+  // it('should show a random quote', () => {
   //   cy.visit('http://localhost:3000/')
-  //     cy.get('*[class^="arts-and-literature"]')
-  //     .click({ force: true})
-  //     cy.get('*[class^="like-button"]')
+  //   cy.get('*[class^="click-for-quote"]')
+  //   .should('be.visible')
+  //   .click({force: true})
+  //     cy.intercept({method: 'GET', path: ''}, {fixture: 'quote.json'})
+  //     cy.request('http://localhost:3000/random-quote')
+  //     cy.get('h5')
+  //     .contains("Any treasure you attain without anyone ever working for it is no treasure at all.")
+  // })
+
+    it('should show a random quote', () => {
+    cy.visit('http://localhost:3000/')
+    cy.get('*[class^="click-for-quote"]')
+    .should('be.visible')
+    .click({force: true})
+      cy.intercept({method: 'GET', path: ''}, {fixture: 'quote.json'})
+      cy.request('http://localhost:3000/random-quote')
+      cy.get('h5')
+      .should("be.visible")
+  })
+
+  // it('should be able to save the question to their game', () => {
+  //     cy.visit('http://localhost:3000/')
+  //       cy.get('*[class^="save-quote"]')
+  //       .click({ force: true})
+  //     cy.intercept(({method: 'GET', path: ''}, {
+  //       fixture: 'quote.json'
+  //     })
+  //     cy.get('*[class^="save-quote"]')
   //     .click({ multiple: true, force: true })
   //   })
 
