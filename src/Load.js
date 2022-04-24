@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import "./Load.css";
 
 const Load = ({fetchData}) => {
@@ -15,3 +16,7 @@ const Load = ({fetchData}) => {
 }
 
 export default Load;
+
+Load.propTypes = {
+  fetchData: PropTypes.func
+}
