@@ -1,11 +1,12 @@
 import React from "react";
 import './App.css';
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import quoteData from "./APIcalls";
 import AsideNav from "./AsideNav";
 import Load from "./Load";
 import Quote from "./Quote";
 import Saved from "./Saved";
+import ErrorHandling from "./ErrorHandling";
 
 class App extends React.Component {
   constructor() {
@@ -41,9 +42,12 @@ class App extends React.Component {
         <p>FanFic Me Chan</p>
         <div className="container">
           <AsideNav />
-          <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
-          <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} />)} />
-          <Route exact path="/saved" render={() => (<Saved savedQuotes={this.state.savedQuotes} /> )} />
+          <Switch>
+            <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
+            <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} />)} />
+            <Route exact path="/saved" render={() => (<Saved savedQuotes={this.state.savedQuotes} /> )} />
+            <Route render={() => <ErrorHandling />} />
+          </Switch>
         </div>
       </main>
     );
