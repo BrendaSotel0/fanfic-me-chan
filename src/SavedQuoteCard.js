@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./SavedQuoteCard.css";
 
 const SavedQuoteCard = ({ anime, character, quote }) => {
@@ -15,3 +16,9 @@ const SavedQuoteCard = ({ anime, character, quote }) => {
 };
 
 export default SavedQuoteCard;
+
+SavedQuoteCard.propTypes = {
+  anime: PropTypes.string,
+  character: PropTypes.string,
+  quote: PropTypes.string,
+};
