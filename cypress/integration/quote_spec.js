@@ -36,7 +36,7 @@ describe("Quote", () => {
   //     .contains("Any treasure you attain without anyone ever working for it is no treasure at all.")
   // })
 
-    it('should show a random quote', () => {
+  it('should show a random quote', () => {
     cy.visit('http://localhost:3000/')
     cy.get('*[class^="click-for-quote"]')
     .should('be.visible')
@@ -47,15 +47,18 @@ describe("Quote", () => {
       .should("be.visible")
   })
 
-  // it('should be able to save the question to their game', () => {
-  //     cy.visit('http://localhost:3000/')
-  //       cy.get('*[class^="save-quote"]')
-  //       .click({ force: true})
-  //     cy.intercept(({method: 'GET', path: ''}, {
-  //       fixture: 'quote.json'
-  //     })
-  //     cy.get('*[class^="save-quote"]')
-  //     .click({ multiple: true, force: true })
-  //   })
+  it('should be able to save the question to their game', () => {
+    cy.visit('http://localhost:3000/')
+    cy.get('*[class^="click-for-quote"]')
+    .should('be.visible')
+    .click({force: true})
+      cy.get('*[class^="save-quote"]')
+      .should('be.visible')
+      .click({ force: true})
+      cy.intercept({method: 'GET', path: ''}, {fixture: 'quote.json'})
+      cy.request('http://localhost:3000/random-quote')
+      cy.get('*[class^="save-quote"]')
+      .click({ multiple: true, force: true })
+    })
 
 })
