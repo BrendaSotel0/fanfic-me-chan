@@ -1,5 +1,6 @@
 import React from "react";
 import SavedQuoteCard from "./SavedQuoteCard";
+import PropTypes from 'prop-types';
 import "./Saved.css"
 
 const Saved = ({savedQuotes}) => {
@@ -27,3 +28,7 @@ const Saved = ({savedQuotes}) => {
 }
 
 export default Saved;
+
+Saved.propTypes = {
+  savedQuotes: PropTypes.array
+}
