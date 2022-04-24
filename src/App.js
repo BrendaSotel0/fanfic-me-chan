@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css';
+import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import quoteData from "./APIcalls";
 import AsideNav from "./AsideNav";
@@ -14,28 +14,30 @@ class App extends React.Component {
     this.state = {
       quote: {},
       savedQuotes: [],
-      error: '',
-    }
+      error: "",
+    };
   }
 
   fetchData = () => {
     return quoteData()
       .then((data) => {
-        this.setState({ quote: data })}
-      )
+        this.setState({ quote: data });
+      })
       .catch((error) =>
         this.setState({ error: `Oops! Something went wrong!` })
-      )
-  }
+      );
+  };
 
   addQuote = (newQuote) => {
-    const isFound = this.state.savedQuotes.find(targetQuote => targetQuote.quote === newQuote.quote)
-    
-    if(!isFound) {
-      this.setState({savedQuotes: [...this.state.savedQuotes, newQuote]})
+    const isFound = this.state.savedQuotes.find(
+      (targetQuote) => targetQuote.quote === newQuote.quote
+    );
+
+    if (!isFound) {
+      this.setState({ savedQuotes: [...this.state.savedQuotes, newQuote] });
     }
-  }
-  
+  };
+
   render() {
     return (
       <main className="App">
@@ -43,9 +45,23 @@ class App extends React.Component {
         <div className="container">
           <AsideNav />
           <Switch>
-            <Route exact path="/" render={() => (<Load fetchData={this.fetchData} /> )} />
-            <Route exact path="/random-quote" render={() => (<Quote quote={this.state.quote} addQuote={this.addQuote} />)} />
-            <Route exact path="/saved" render={() => (<Saved savedQuotes={this.state.savedQuotes} /> )} />
+            <Route
+              exact
+              path="/"
+              render={() => <Load fetchData={this.fetchData} />}
+            />
+            <Route
+              exact
+              path="/random-quote"
+              render={() => (
+                <Quote quote={this.state.quote} addQuote={this.addQuote} />
+              )}
+            />
+            <Route
+              exact
+              path="/saved"
+              render={() => <Saved savedQuotes={this.state.savedQuotes} />}
+            />
             <Route render={() => <ErrorHandling />} />
           </Switch>
         </div>
